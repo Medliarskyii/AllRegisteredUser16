@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "eB7Qe1VXkei3jMLA00lCD8bRVINrsybfBKApI4cL5TwIFPBtpc5Xx5/xdTK7X2GeyXX2Q3I2cMARsErmDLSMqA==",
+  "success": true,
+  "projectFilePath": "G:\\Project Kyrs\\Kyrsova_PZ – копія\\DTO\\DTO.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\medvl\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\medvl\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
