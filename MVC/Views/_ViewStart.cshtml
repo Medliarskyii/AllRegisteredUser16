@@ -1,0 +1,15 @@
+﻿@{
+
+
+    switch (PZ_KContext.ViewMode)
+    {
+        case SiteViewMode.Login:
+            Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+            break;
+        case SiteViewMode.User:
+            Layout = "~/Views/Shared/_Layout.cshtml";
+            break;
+
+    }
+}
+

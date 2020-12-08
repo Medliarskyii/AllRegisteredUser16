@@ -1,0 +1,93 @@
+﻿@model WebCoreKino5.Models.UserExt
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Surname" class="control-label"></label>
+                <input asp-for="Surname" class="form-control" />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mail" class="control-label"></label>
+                <input asp-for="Mail" class="form-control" />
+                <span asp-validation-for="Mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KeyWord" class="control-label"></label>
+                <input asp-for="KeyWord" class="form-control" />
+                <span asp-validation-for="KeyWord" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExpiredDate" class="control-label"></label>
+                <input asp-for="ExpiredDate" class="form-control" />
+                <span asp-validation-for="ExpiredDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsTemporary" class="control-label"></label>
+                <input asp-for="IsTemporary" class="form-control" />
+                <span asp-validation-for="IsTemporary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoleId" class="control-label"></label>
+                <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
+                <span asp-validation-for="RoleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+
+            
+            <div class="form-group">
+                <label>Image</label>
+                <input name="Avatar" type="file" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Image" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    @if (Model.Image != null)
+    {
+        <img style='width:240px; height:320px;' src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Image))" />
+    }
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
